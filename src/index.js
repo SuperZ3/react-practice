@@ -3,13 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Supply from './context'
+import store from './stores'
 
-ReactDOM.render(
+const update = () => ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Supply>
+      <App />
+    </Supply>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+store.subscribe(update)
+
+update();
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

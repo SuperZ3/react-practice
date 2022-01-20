@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import moment from 'moment';
+import { MyContext } from '../context';
 
 const Home = () => {
-  const [state, setState] = useState(0);
-  const handleClick = () => {
-    setState(state + 1);
-  }
+  const store = useContext(MyContext)
+  const handleClick = () => store.dispatch({
+      type: 'add'
+    })
   return (
-    <div onClick={handleClick}>{state}alsfd</div>
+    <div onClick={handleClick}>dsf {store.getState()} times
+      <p>{moment.unix(1485532800).format('M月D日公布')}</p>
+    </div>
   )
 }
 
