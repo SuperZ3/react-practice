@@ -3,7 +3,7 @@ import { createStore } from 'redux';
 const reducer = (state = 0, action) => {
   switch (action.type) {
     case 'add':
-      state = state + 1;
+      state = state;
       break;
     case 'two':
       state = state - 2;
