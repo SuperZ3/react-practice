@@ -1,0 +1,37 @@
+#child {
+  width: 200px;
+  height: 200px;
+  border: 1px solid red;
+}
+
+#huge {
+  width: 300px;
+  height: 1000px;
+  border: 1px solid green;
+}
+
+.default-li {
+  border: 1px solid black;
+  color: black;
+}
+
+.default-li.active {
+  color: red;
+}
+
+.child-div {
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
+}
+
+.nav {
+  position: fixed;
+  right: 0;
+  top: 50px;
+  color: black;
+}
+
+.lis.active {
+  color: red;
+}
